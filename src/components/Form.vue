@@ -21,7 +21,7 @@
                 <br/>
                 <textarea name="message" rows="50" cols="30" v-model="formModel.request" placeholder="Tell us..."></textarea>
                 <br>
-                <label>Unsubscribe from our services?</label><input type="checkbox" id="checkbox" v-model="unsubscribe"><br/>
+                <span><label>Unsubscribe from our services?</label><input type="checkbox" id="checkbox" v-model="unsubscribe"><br/></span>
                 <a @click="handleSubmit"><div class="cc-form__btn">Submit</div></a>
             </form>
         </div>
@@ -134,7 +134,6 @@ export default {
     .cc-form__fields textarea {
         width: 90%;
         height: 250px;
-        margin: 5px 0;
 		border: none;
 		border-radius: 30px;
         background-color: whitesmoke;
@@ -142,6 +141,7 @@ export default {
         font-size: 1rem;
         font-weight: 100;
         text-align: left;
+        resize: none;
     }
 
     .cc-form__fields label {
@@ -149,7 +149,10 @@ export default {
     }
     #checkbox {
         position: absolute;
-        bottom: 19%;
+        bottom: 20.5%;
         left: 50%;
+    }
+    .cc-form__fields span {
+        margin-left: 10px;
     }
 </style>

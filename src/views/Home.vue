@@ -29,5 +29,7 @@ export default {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 </style>
