@@ -74,13 +74,6 @@ export default {
         }
     }
 }
-
-//sample request to https://lpapi.zalinco.com/customerCare/sendMail/
-//EMAIL: m.vandeurzen@tech-lab.io
-//fullname: MIVD
-//phonenumber: 0612345678
-//request: This is just a test. Please disregard.
-
 </script>
 
 <style>
