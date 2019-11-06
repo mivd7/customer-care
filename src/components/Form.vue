@@ -7,7 +7,7 @@
                 <form @submit="handleSubmit">
                     <input placeholder="First Name" v-model="firstName"/>
                     <input placeholder="Last Name" v-model="lastName"/>
-                    <input placeholder="E-mail" v-model="formModel.email"/>
+                    <input placeholder="E-mail" v-model="formModel.EMAIL"/>
                     <input placeholder="Registered Phone No." v-model="formModel.phonenumber"/><br/>
                     <a @click="goToNextStep"><div class="cc-form__btn">Next</div></a>
                 </form>
@@ -34,14 +34,14 @@
     
 <script>
 import axios from 'axios';
-import {baseUrl} from '../constants';
+import { baseUrl } from '../constants';
 
 export default {
     name: 'Form',
     data() {
       return {
         formModel: {
-          email: '',
+          EMAIL: '',
           fullname: '',
           phonenumber: '',
           request: '',
@@ -50,7 +50,8 @@ export default {
         firstName: '',
         lastName: '',
         showNextStep: false,
-        isDone: false
+        isDone: false,
+        // unsubscribe: false,
       }
     },
     methods: {
@@ -64,8 +65,8 @@ export default {
             this.showNextStep = true
         },
         handleSubmit() {
-            const { email, fullname, phonenumber, request } = this.formModel;
-            if(email === '' || fullname === '' || phonenumber === '' || request === '') {
+            const { EMAIL, fullname, phonenumber, request } = this.formModel;
+            if(EMAIL === '' || fullname === '' || phonenumber === '' || request === '') {
                 console.warn('not all fields completed!', this.formModel)
             } else {
                 this.isDone = true
